@@ -1,0 +1,214 @@
+---
+layout: single
+title: "Registration"
+permalink: /registration.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3C-QFS Registration</title>
+    <!-- <link rel="stylesheet" href="/assets/css/styles.scss"> -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("DdvmcavVMAspG7hsr");
+        })();
+        
+        function submitForm(event) {
+            event.preventDefault();
+
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                affiliation: document.getElementById('affiliation').value,
+                position: document.getElementById('position').value,
+                comment: document.getElementById('comment').value
+            };
+
+            emailjs.send('service_n4gk0fw', 'template_cof6nyh', formData)
+                .then(function(response) {
+                    alert('Registration submitted successfully!');
+                }, function(error) {
+                    alert('Failed to send registration. Please try again.');
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p>The seminar series is primarily for students and academics active in the foundations of physics. To request to join the 3C-QFS mailing list, please fill out the form below.</p>
+        <form onsubmit="submitForm(event)">
+            <label for="name">Full name:<span style="color: red;">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Institutional email:<span style="color: red;">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="affiliation">Affiliation:</label>
+            <input type="text" id="affiliation" name="affiliation">
+
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position">
+
+            <label for="comment">Research interests and reason for wanting to join:<span style="color: red;">*</span></label>
+            <textarea id="comment" name="comment" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p><i><span style="color: red;">*</span>Indicates required field</i></p>
+    </div>
+</body>
+</html>
+
+
+<!-- ---
+permalink: /register.html
+title: "Registration"
+layouts_gallery:
+  - url: /assets/images/mm-layout-splash.png
+    image_path: /assets/images/mm-layout-splash.png
+---
+<!DOCTYPE html>
+
+<div class="t678 "><div class="t-container"><div class="t-col t-col_8 t-prefix_2"><div>
+  <form id="form358925898" name="form358925898" role="form" action="#" method="POST" data-formactiontype="2" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_3 " data-success-callback="t678_onSuccess">
+    <input type="hidden" name="formservices[]" value="4736f834f675b4dfaf8ae9dc2183c083" class="js-formaction-services">
+    <div class="js-successbox t-form__successbox t-text t-text_md" aria-live="polite" style="display:none;"></div>
+    <div class="t-form__inputsbox"><div class="t-input-group t-input-group_em" data-input-lid="1493283059688">
+      <label for="input_1493283059688" class="t-input-title t-descr t-descr_md" id="field-title_1493283059688" data-redactor-toolbar="no" field="li_title__1493283059688" style="">Email</label>
+      <div class="t-input-block">
+        <input type="text" autocomplete="email" name="Email" id="input_1493283059688" class="t-input js-tilda-rule" value="" placeholder="Your Email" data-tilda-req="1" aria-required="true" data-tilda-rule="email" aria-describedby="error_1493283059688" style="color:#000000;border:1px solid #000000;">
+        <div class="t-input-error" aria-live="polite" id="error_1493283059688"></div>
+        </div>
+      </div>
+      <div class="t-input-group t-input-group_nm" data-input-lid="1494858943227">
+        <label for="input_1494858943227" class="t-input-title t-descr t-descr_md" id="field-title_1494858943227" data-redactor-toolbar="no" field="li_title__1494858943227" style="">Name</label>
+        <div class="t-input-block">
+          <input type="text" autocomplete="name" name="Name" id="input_1494858943227" class="t-input js-tilda-rule " value="" placeholder="Your Full Name" data-tilda-req="1" aria-required="true" data-tilda-rule="name" aria-describedby="error_1494858943227" style="color:#000000;border:1px solid #000000;">
+          <div class="t-input-error" aria-live="polite" id="error_1494858943227"></div>
+          </div>
+        </div>
+        <div class="t-input-group t-input-group_in" data-input-lid="1495040492013">
+          <label for="input_1495040492013" class="t-input-title t-descr t-descr_md" id="field-title_1495040492013" data-redactor-toolbar="no" field="li_title__1495040492013" style="">Affiliation</label>
+          <div class="t-input-block"><input type="text" name="Affiliation" id="input_1495040492013" class="t-input js-tilda-rule " value="" placeholder="Your Affiliation" data-tilda-req="1" aria-required="true" aria-describedby="error_1495040492013" style="color:#000000;border:1px solid #000000;">
+          <div class="t-input-error" aria-live="polite" id="error_1495040492013"></div>
+          </div>
+        </div>
+        <div class="t-form__errorbox-middle">
+          <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+            <div class="t-form__errorbox-text t-text t-text_md">
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+              <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+            </div>
+          </div>
+        </div>
+        <div class="t-form__submit">
+          <button type="submit" class="t-submit" style="color:#ffffff;background-color:#000000;">Send</button>
+        </div>
+      </div>
+      <div class="t-form__errorbox-bottom">
+        <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+          <div class="t-form__errorbox-text t-text t-text_md">
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; left: -5000px; bottom: 0; display: none;">
+        <input type="text" name="form-spec-comments" value="Its good" class="js-form-spec-comments" tabindex="-1">
+      </div>
+      </form>
+        <style> #rec358925898 input::-webkit-input-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 input::-moz-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 input:-moz-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 input:-ms-input-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 textarea::-webkit-input-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 textarea::-moz-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 textarea:-moz-placeholder {color:#000000; opacity: 0.5;}
+                #rec358925898 textarea:-ms-input-placeholder {color:#000000; opacity: 0.5;}
+        </style>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <td colspan="2">
+    <p>
+      Subscribe to 3cqfs by filling out the following
+        form.
+    This is a closed list, which means your subscription
+          will be held for approval.  You will be notified of the list
+          moderator's decision by email. This is also a private list, which means that the
+          list of members is not available to non-members.
+    </p><ul>
+  <form method="POST" action="../subscribe/3cqfs" data-bitwarden-watching="1">
+        <table border="0" cellspacing="2" cellpadding="2" width="70%">
+      <tbody><tr>
+        <td bgcolor="#dddddd" width="55%">Your email address:</td>
+        <td width="33%"><input type="Text" name="email" size="30" value="">
+  </td>
+  <td width="12%">&nbsp;</td></tr>
+    <tr>
+      <td bgcolor="#dddddd" width="55%">Your name (optional):</td>
+      <td width="33%"><input type="Text" name="fullname" size="30" value=""></td>
+  <td width="12%">&nbsp;</td></tr>
+    <tr>
+  <td colspan="3"><font size="-1">You may enter a
+      privacy password below. This provides only mild security,
+      but should prevent others from messing with your
+      subscription.  <b>Do not use a valuable password</b> as
+      it will occasionally be emailed back to you in cleartext.
+
+          <br><br>If you choose not to enter a password, one will be
+          automatically generated for you, and it will be sent to
+          you once you've confirmed your subscription.  You can
+          always request a mail-back of your password when you edit
+          your personal options.
+      
+      </font>
+  </td>
+    </tr>  
+    <tr>
+  <td bgcolor="#dddddd">Pick a password:</td>
+  <td><input type="Password" name="pw" size="15"></td>
+  <td>&nbsp;</td></tr>
+    <tr> 
+  <td bgcolor="#dddddd">Reenter password to confirm:</td>
+  <td><input type="Password" name="pw-conf" size="15"></td>
+  <td>&nbsp; </td></tr>
+    <tr>
+      <td bgcolor="#dddddd">Which language do you prefer to display your messages?</td> 
+      <td> English (USA)</td>
+      <td>&nbsp; </td></tr>
+
+    <tr>
+  <td>Would you like to receive list mail batched in a daily
+    digest?
+    </td>
+  <td> No
+        Yes
+  </TD>
+    </tr>
+
+    
+    <tr>
+  <td colspan="3">
+    <center><input type="Submit" name="email-button" value="Subscribe"></center>
+  </td>
+  </tr>
+  </tbody></table>
+  </form>
+  </ul>
+  </td> -->

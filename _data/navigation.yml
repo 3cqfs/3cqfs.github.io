@@ -1,8 +1,6 @@
 # main links
 main:
-  - title: "Upcoming talks"
-    url: /upcomingtalks/
   - title: "Past talks"
     url: /pasttalks/
-  - title: "Register"
-    url: /register/
+  - title: "Registration"
+    url: /registration/
