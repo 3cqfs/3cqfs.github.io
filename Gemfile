@@ -7,8 +7,13 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 4.3.3"
-gem "minimal-mistakes-jekyll"
+
+gem "jekyll", "~> 3.9.3"
+# gem "minimal-mistakes-jekyll"
+
+gem "github-pages", group: :jekyll_plugins # gem "github-pages", "~> 231", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+
 gem "csv", "~> 3.3.0"
 gem "base64", "~> 0.2.0"
 
@@ -37,3 +42,5 @@ gem "base64", "~> 0.2.0"
 # gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem "webrick", "~> 1.8"
+
+gem "webrick", "~> 1.8"
