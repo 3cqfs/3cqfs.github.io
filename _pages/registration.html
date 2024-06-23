@@ -30,10 +30,32 @@ classes: wide
 
             emailjs.send('service_n4gk0fw', 'template_cof6nyh', formData)
                 .then(function(response) {
-                    alert('Registration submitted successfully!');
+                    displayMessage('Thank you! Your request has been submitted.', 'success');
                 }, function(error) {
-                    alert('Failed to send registration. Please try again.');
+                    displayMessage('Whoops! Your request was unsuccessful :(', 'error');
                 });
+        }
+
+        function displayMessage(message, type) {
+            var formContainer = document.querySelector('.container');
+            var messageBox = document.createElement('div');
+            messageBox.textContent = message;
+            messageBox.style.padding = '20px';
+            messageBox.style.borderRadius = '5px';
+            messageBox.style.marginTop = '20px';
+            messageBox.style.textAlign = 'center';
+            messageBox.style.fontWeight = 'bold';
+            if (type === 'success') {
+                messageBox.style.backgroundColor = '#d4edda';
+                messageBox.style.color = '#155724';
+                messageBox.style.border = '1px solid #c3e6cb';
+            } else {
+                messageBox.style.backgroundColor = '#f8d7da';
+                messageBox.style.color = '#721c24';
+                messageBox.style.border = '1px solid #f5c6cb';
+            }
+            formContainer.innerHTML = '';
+            formContainer.appendChild(messageBox);
         }
     </script>
 </head>
