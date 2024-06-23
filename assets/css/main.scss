@@ -5,6 +5,28 @@ search: false
 
 @charset "utf-8";
 
+// Add stuff here to overwrite css
+
+// $link-color: red;
+
+// Import default minimal 
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-// @import "custom";
+
+// Your custom styles
+.wide {
+    .page {
+      @include breakpoint($large) {
+        float: none;    // disable from .page
+        margin: 0 auto; // center
+        padding-right: 0;
+      }
+  
+      @include breakpoint($x-large) {
+        float: none;    // disable from .page
+        margin: 0 auto; // center
+        padding-right: 0;
+      }
+    }
+  }
