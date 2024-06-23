@@ -5,16 +5,16 @@ search: false
 
 @charset "utf-8";
 
-// Add stuff here to overwrite css
+// Override variables here
 
-// $link-color: red;
+// e.g., $youtube-color: white !default;
 
 // Import default minimal 
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Your custom styles
+// Centre wide pages
 .wide {
     .page {
       @include breakpoint($large) {
@@ -29,4 +29,13 @@ search: false
         padding-right: 0;
       }
     }
+  }
+
+  // Turn YouTube and star icons in footer white
+  .page__footer-follow .social-icons a .fa-youtube {
+    color: white;
+  }
+
+  .page__footer-follow .social-icons a .fa-star {
+    color: white;
   }
