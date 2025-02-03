@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : " Tricontinental Quantum Fundamentals Seminar"
+title                    : "Tricontinental Quantum Fundamentals Seminar"
 title_separator          : "-"
 subtitle                 : "Covering foundational topics in relativistic quantum physics. Connecting Australia, Europe and America." # site tagline that appears below site title in masthead
 name                     : "3C-QFS"
