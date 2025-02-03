@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 locale                   : "en-US"
 title                    : "Tricontinental Quantum Fundamentals Seminar"
 title_separator          : "-"
-subtitle                 : "Covering foundational topics in relativistic quantum physics. Connecting Australia, Europe and America." # site tagline that appears below site title in masthead
+subtitle                 : "Covering foundational topics in relativistic quantum physics. Connecting Australia, Europe, and America." # site tagline that appears below site title in masthead
 name                     : "3C-QFS"
-description              : "Covering foundational topics in relativistic quantum physics. Connecting Australia, Europe and America."
+description              : "Covering foundational topics in relativistic quantum physics. Connecting Australia, Europe, and America."
 url                      : "https://3cqfs.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
